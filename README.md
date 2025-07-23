@@ -28,8 +28,8 @@ The method then outputs:
 4. measures the final state of the physical data qubits onto a final measurement register. 
 
 
-<b><ul>Remarks: </ul></b>
-
+### Remarks: 
+ 
 - The algorithm used for preparing the logical zero state is based on [Gottesman's algorithm](https://arxiv.org/abs/quant-ph/9705052).
 
 - The python source file also contains a method that can prepare appropriate logical operators for a given quantum CSS code. Therefore, one can also prepare various logical states that are different from the logical all zero state.
