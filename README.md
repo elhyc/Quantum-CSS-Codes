@@ -6,7 +6,7 @@ Quantum <b>C</b>(alderbank)-<b>S</b>(teane)-<b>S</b>(hor) codes are a class of <
 This repository contains a [Python source file](StabilizerCodesGottesman.py) and a  [Jupyter notebook](quantumCSS_examples.ipynb).
 
 
-## The python source file:
+## The Python source file:
 
 
 This python module contains a number of useful methods, applicable to the simulation of quantum CSS error correcting codes. The central method of interest in this file is the method <em>"CSS_code"</em>. 
