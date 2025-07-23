@@ -6,10 +6,10 @@ Quantum <b>C</b>(alderbank)-<b>S</b>(teane)-<b>S</b>(hor) codes are a class of <
 This repository contains a [Python source file](StabilizerCodesGottesman.py) and a  [Jupyter notebook](quantumCSS_examples.ipynb).
 
 
-## The python source file:
+## The Python source file:
 
 
-This python module contains a number of useful methods, applicable to the simulation of quantum CSS error correcting codes. The central method of interest in this file is the method <em>"CSS_code"</em>. 
+The Python module contains a number of useful methods, applicable to the simulation of quantum CSS error correcting codes. The central method of interest in this file is the method <em>"CSS_code"</em>. 
 
 This method takes as input:
 
@@ -32,7 +32,7 @@ The method then outputs:
  
 - The algorithm used for preparing the logical zero state is based on [Gottesman's algorithm](https://arxiv.org/abs/quant-ph/9705052).
 
-- The python source file also contains a method that can prepare appropriate logical operators for a given quantum CSS code. Therefore, one can also prepare various logical states that are different from the logical all zero state.
+- The Python source file also contains a method that can prepare appropriate logical operators for a given stabilizer code (which are not necessarily CSS!). Therefore, one can also prepare various logical states that are different from the logical all zero state. This is also based on Gottesman's algorithm. In fact, Gottesman's algorithm for bringing a stabilizer matrix to standard form allows one to easily prepare the logical zero state <b> and </b> prepare logical operators. 
 
 - At the moment, the syndrome recovery procedure is very primitive, it will only reliably handle single X or Z errors. However, for specific quantum CSS codes, one can use the methods provided in the source file in conjunction with a more sophisicated syndrome recovery algorithm in a more specific context (for example, [Kitaev's toric code](https://github.com/elhyc/Kitaev-Toric-Code) or quantum color codes). 
 
