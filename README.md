@@ -1,3 +1,3 @@
 # Quantum Error Correcting Codes: CSS Codes
 
-This repository contains Qiskit implementations/demonstrations of <b>C</b>(alderbank)-<b>S</b>(teane)-<b>S</b>(hor) codes
+This repository contains Qiskit implementations/demonstrations of <b>C</b>(alderbank)-<b>S</b>(teane)-<b>S</b>(hor) codes. Quantum CSS codes are a class of <em>stabilizer codes</em>, whose stabilizer generators have nice properties. In particular, quantum CSS codes are stabilizer codes whose stabilizer generators can be expressed as Pauli strings containing only X and Z terms. One important simplification this gives us is that when performs syndrome measurements for these codes, one can measure X stabilizers and Z stabilizers independently from each other. This property allows us to implement syndrome recovery procedures in a simpler fashion. 
