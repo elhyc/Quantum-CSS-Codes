@@ -125,17 +125,7 @@ def syndrome_measurement(qc, generator_data, syndromes, meas, n,k, pauli_type):
         qc.h(syndromes[row_idx])
         qc.measure(syndromes[row_idx], meas[row_idx])
         
-        
-        ##reset syndromes
-        qc.h(syndromes[row_idx])
-        
-        for idx in ones:
-            if pauli_type == 'X':
-                qc.cx( syndromes[row_idx], data[idx] )
-            if pauli_type == 'Z':
-                qc.cz( syndromes[row_idx], data[idx] )
-                
-        qc.h(syndromes[row_idx])
+
         
             
             
@@ -229,14 +219,14 @@ def CSS_code(gen_matrix, n, k, p_error):
     
     
      ####### measuring Z stabilizers  ###################
-    syndrome_measurement(CSS_code, generator_data, CSS_X_syndromes, CSS_X_meas, n,k, 'X')
+    syndrome_measurement(CSS_code, generator_data, CSS_Z_syndromes, CSS_Z_meas, n,k, 'Z')
 
     for i in range(len(physical_qubits)):
         ones = [str(x) for x in generator_data[1].col(i)]
         ones_matching = int(''.join(ones)[::-1],2) 
     
-    with CSS_code.if_test( (CSS_X_meas, ones_matching) ):
-        CSS_code.z(i)
+    with CSS_code.if_test( (CSS_Z_meas, ones_matching) ):
+        CSS_code.x(i)
     ####################
     
     CSS_code.compose(CSS_decode, qubits=physical_qubits, inplace=True)
